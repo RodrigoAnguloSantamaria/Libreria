@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Libros App</title>
+    <link rel="stylesheet" href="./styles.css">
+    <script src="libros.js" defer></script>
+</head>
+<body>
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+          <div class="modal-header">
+            <span class="close">&times;</span>
+           </div>
+          
+         
+        </div>
+      
+      </div>
+    <nav>
+        <section class="nav__title">
+            <h1>MI LIBRERIA</h1>
+            
+            <p>Tema: 
+                <label id="switch">
+                <input type="checkbox">
+                <span class="slider round"></span>
+                </label>
+            </p>
+         </section>
+        <section class="nav__filtros">
+            <h3>Filtros de busqueda</h3>
+            <p>
+                Introduce título:
+                 <input type="text" name="nombre" class="nameInput">
+            </p>
+            <p>
+                Selecciona un género:
+            <select id="genre">
+                <option value="All">Todos géneros</option>
+                <option value="Fantasía">Fantasía</option>
+                <option value="Ciencia ficción">Ciencia ficción</option>
+                <option value="Zombies">Zombies</option>
+                <option value="Terror">Terror</option>
+            </select>
+            </p>
+            <p>
+                <span>Selecciona numero máximo de páginas: </span>
+                1<input type="range" id="maxPages" name="maxPages" min="1">
+                
+                <span class="maxNumPages"></span>
+            </p>
+            <button onclick="resetFilter()">Borrar filtros</button>
+        </section>
+    </nav>
+    <section class="nav__section">
+        <p>Libros disponibles en libreria:<span id="numLibrary" class="num__span"></span></p>
+        <p>Libros en lista de lectura:<span id="numList" class="num__span"></span>
+        <button onclick="showReadingList()" id="btnShowList">Ver</button>
+        </p>
+        
+    </section>
+    <div class="container">
+        
+
+        <ul class="container__ul">
+
+        </ul>
+        <ul class="reading__ul">
+            
+        </ul>
+    </div>
+</body>
+</html>
